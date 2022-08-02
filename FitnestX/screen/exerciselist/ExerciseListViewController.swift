@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExerciseListViewController.swift
 //  FitnestX
 //
 //  Created by firecode id2 on 02.08.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ExerciseListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,3 @@ class ViewController: UIViewController {
 
 
 }
-
