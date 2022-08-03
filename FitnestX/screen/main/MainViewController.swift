@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
             viewPager.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             viewPager.heightAnchor.constraint(equalTo: self.view.heightAnchor),
             viewPager.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            viewPager.topAnchor.constraint(equalTo: self.view.topAnchor)
+            viewPager.topAnchor.constraint(equalTo: view.topAnchor)
         ])
     }
     
@@ -34,14 +34,8 @@ class MainViewController: UIViewController {
     lazy var viewPager: ViewPager = {
         let viewPager = ViewPager()
         
-        let view1 = UIView()
-        view1.backgroundColor = .red
-        
-        let newImageView = UIImageView()
-        newImageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 375)
-        view1.addSubview(newImageView)
-        newImageView.contentMode = .scaleToFill
-        newImageView.image = UIImage(named: "ic_exercises_slice")
+        let view1 = ExercisesView()
+
         
         
         let view2 = UIView()

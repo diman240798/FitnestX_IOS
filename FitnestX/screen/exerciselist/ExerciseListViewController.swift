@@ -8,11 +8,9 @@
 import UIKit
 
 class ExerciseListViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }

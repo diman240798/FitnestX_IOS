@@ -17,7 +17,8 @@ class WebViewViewController: UIViewController {
         let webView = UIWebView()
         self.view.addSubview(webView)
         
-        webView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        webView.frame = .zero
+        webView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             webView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
