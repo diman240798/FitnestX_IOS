@@ -11,17 +11,32 @@ class ExerciseCell : UICollectionViewCell {
     
     public static let identifier = "ExerciseCell"
     
-    public var text: String = "" {
+    public var data: ExerciseItem? = nil {
         didSet {
-            nameText.text = text
+            icon.image = UIImage(named: data!.icon)
+            nameText.text = data!.text
         }
     }
     
+    lazy var icon: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var nameText: UILabel = {
-        let textView = UILabel()
-        textView.textAlignment = .center
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        return textView
+        let view = UILabel()
+        view.textAlignment = .center
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
+    lazy var imageNext: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "ic_next")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: - Initialization
@@ -37,12 +52,26 @@ class ExerciseCell : UICollectionViewCell {
     }
     
     func setupUI() {
+        self.contentView.addSubview(icon)
         self.contentView.addSubview(nameText)
+        self.contentView.addSubview(imageNext)
+        setConstraints()
+    }
+    
+    func setConstraints() {
         NSLayoutConstraint.activate([
-            nameText.topAnchor.constraint(equalTo: contentView.topAnchor),
-            nameText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            nameText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            nameText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            icon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            icon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            nameText.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            nameText.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            imageNext.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+            imageNext.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
 }

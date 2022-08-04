@@ -38,14 +38,7 @@ class MainViewController: UIViewController {
 
         
         
-        let view2 = UIView()
-        view2.backgroundColor = .blue
-        
-        let newImageView2 = UIImageView()
-        newImageView2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 375)
-        view2.addSubview(newImageView2)
-        newImageView2.contentMode = .scaleToFill
-        newImageView2.image = UIImage(named: "ic_men_program_slice")
+        let view2 = ProgramView()
         
         let view3 = UIView()
         view3.backgroundColor = .orange

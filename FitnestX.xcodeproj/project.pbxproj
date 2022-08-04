@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8219C36E289961680092396E /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8219C36D289961680092396E /* ExercisesView.swift */; };
+		82B3BA3A289BBB6F00CDB5E0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA39289BBB6F00CDB5E0 /* Colors.swift */; };
+		82B3BA3C289BC1F900CDB5E0 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA3B289BC1F900CDB5E0 /* Exercises.swift */; };
+		82B3BA3E289BDA4E00CDB5E0 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */; };
 		82CBB83228991F4200DA44D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83128991F4200DA44D8 /* AppDelegate.swift */; };
 		82CBB83428991F4200DA44D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83328991F4200DA44D8 /* SceneDelegate.swift */; };
 		82CBB83628991F4200DA44D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83528991F4200DA44D8 /* MainViewController.swift */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		8219C36D289961680092396E /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		82B3BA39289BBB6F00CDB5E0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		82B3BA3B289BC1F900CDB5E0 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		82CBB82E28991F4200DA44D8 /* FitnestX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnestX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CBB83128991F4200DA44D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CBB83328991F4200DA44D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 			children = (
 				8219C36D289961680092396E /* ExercisesView.swift */,
 				82FED060289A668D00242B9F /* ExerciseCell.swift */,
+				82B3BA3B289BC1F900CDB5E0 /* Exercises.swift */,
 			);
 			path = exercises;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 		8219C36C289961370092396E /* program */ = {
 			isa = PBXGroup;
 			children = (
+				82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */,
 			);
 			path = program;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				82CBB83A28991F4400DA44D8 /* Assets.xcassets */,
 				82CBB83C28991F4400DA44D8 /* LaunchScreen.storyboard */,
 				82CBB83F28991F4400DA44D8 /* Info.plist */,
+				82B3BA39289BBB6F00CDB5E0 /* Colors.swift */,
 			);
 			path = FitnestX;
 			sourceTree = "<group>";
@@ -356,8 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8219C36E289961680092396E /* ExercisesView.swift in Sources */,
+				82B3BA3C289BC1F900CDB5E0 /* Exercises.swift in Sources */,
+				82B3BA3A289BBB6F00CDB5E0 /* Colors.swift in Sources */,
 				82CBB8692899213400DA44D8 /* WebViewViewController.swift in Sources */,
 				82CBB867289920F800DA44D8 /* ExerciseListViewController.swift in Sources */,
+				82B3BA3E289BDA4E00CDB5E0 /* ProgramView.swift in Sources */,
 				82FED061289A668D00242B9F /* ExerciseCell.swift in Sources */,
 				82CBB86C2899232400DA44D8 /* ViewPager.swift in Sources */,
 				82CBB8702899235900DA44D8 /* PageCollectionViewCell.swift in Sources */,

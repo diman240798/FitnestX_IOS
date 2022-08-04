@@ -9,6 +9,8 @@ import UIKit
 
 class ExercisesView : UIView {
     
+    let exercises = Exercises.values()
+    
     init() {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
@@ -30,26 +32,22 @@ class ExercisesView : UIView {
         let title = UILabel()
         self.addSubview(title)
         title.frame = .zero
-        title.text = "Упражнения"
-        title.textColor = .black
-        
+        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
+        let boldString = NSMutableAttributedString(string: "Упражнения", attributes:attrs)
+        title.attributedText = boldString
+        title.textColor = Colors.blackPrimary
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.textAlignment = .center
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
-            title.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            title.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+            title.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
         
-        
-        let colorTop = UIColor(red: 157.0 / 255.0, green: 206.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 146.0 / 255.0, green: 163.0 / 255.0, blue: 253.0 / 255.0, alpha: 1.0).cgColor
         
         let gr = CAGradientLayer()
         gr.cornerRadius = 40
         gr.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         gr.frame = UIScreen.main.bounds
-        gr.colors = [colorTop, colorBottom]
+        gr.colors = [Colors.blueLight.cgColor, Colors.blueDark.cgColor]
         gr.locations = [0.0, 1.0]
         
         let listBackground = UIView()
@@ -67,6 +65,21 @@ class ExercisesView : UIView {
             listBackground.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             listBackground.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
+        
+        let whiteLineView = UIView()
+        self.addSubview(whiteLineView)
+//        whiteLineView.frame = CGRect(x: 0, y: 0, width: 50, height: 5)
+        whiteLineView.translatesAutoresizingMaskIntoConstraints = false
+        whiteLineView.backgroundColor = .white
+        whiteLineView.layer.cornerRadius = 2
+        whiteLineView.alpha = 0.5
+        NSLayoutConstraint.activate([
+            whiteLineView.widthAnchor.constraint(equalToConstant: 50),
+            whiteLineView.heightAnchor.constraint(equalToConstant: 5),
+            whiteLineView.topAnchor.constraint(equalTo: listBackground.topAnchor, constant: 12),
+            whiteLineView.centerXAnchor.constraint(equalTo: listBackground.centerXAnchor)
+        ])
+        
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -104,15 +117,14 @@ extension ExercisesView : UICollectionViewDelegate {
 
 extension ExercisesView : UICollectionViewDataSource {
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return exercises.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseCell.identifier, for: indexPath) as! ExerciseCell
-        cell.text = "Плечи"
+        cell.data = exercises[indexPath.row]
         return cell
     }
-    
-    
 }
