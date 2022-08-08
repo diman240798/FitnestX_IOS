@@ -11,6 +11,8 @@
 		82B3BA3A289BBB6F00CDB5E0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA39289BBB6F00CDB5E0 /* Colors.swift */; };
 		82B3BA3C289BC1F900CDB5E0 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA3B289BC1F900CDB5E0 /* Exercises.swift */; };
 		82B3BA3E289BDA4E00CDB5E0 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */; };
+		82B8859B289BFE5C003F7AA5 /* ProgramItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8859A289BFE5C003F7AA5 /* ProgramItem.swift */; };
+		82B8859D289BFE70003F7AA5 /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8859C289BFE70003F7AA5 /* ProgramCell.swift */; };
 		82CBB83228991F4200DA44D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83128991F4200DA44D8 /* AppDelegate.swift */; };
 		82CBB83428991F4200DA44D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83328991F4200DA44D8 /* SceneDelegate.swift */; };
 		82CBB83628991F4200DA44D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB83528991F4200DA44D8 /* MainViewController.swift */; };
@@ -51,6 +53,8 @@
 		82B3BA39289BBB6F00CDB5E0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		82B3BA3B289BC1F900CDB5E0 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		82B8859A289BFE5C003F7AA5 /* ProgramItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramItem.swift; sourceTree = "<group>"; };
+		82B8859C289BFE70003F7AA5 /* ProgramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
 		82CBB82E28991F4200DA44D8 /* FitnestX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnestX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CBB83128991F4200DA44D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CBB83328991F4200DA44D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				82B3BA3D289BDA4E00CDB5E0 /* ProgramView.swift */,
+				82B8859C289BFE70003F7AA5 /* ProgramCell.swift */,
+				82B8859A289BFE5C003F7AA5 /* ProgramItem.swift */,
 			);
 			path = program;
 			sourceTree = "<group>";
@@ -368,7 +374,9 @@
 				82B3BA3C289BC1F900CDB5E0 /* Exercises.swift in Sources */,
 				82B3BA3A289BBB6F00CDB5E0 /* Colors.swift in Sources */,
 				82CBB8692899213400DA44D8 /* WebViewViewController.swift in Sources */,
+				82B8859D289BFE70003F7AA5 /* ProgramCell.swift in Sources */,
 				82CBB867289920F800DA44D8 /* ExerciseListViewController.swift in Sources */,
+				82B8859B289BFE5C003F7AA5 /* ProgramItem.swift in Sources */,
 				82B3BA3E289BDA4E00CDB5E0 /* ProgramView.swift in Sources */,
 				82FED061289A668D00242B9F /* ExerciseCell.swift in Sources */,
 				82CBB86C2899232400DA44D8 /* ViewPager.swift in Sources */,

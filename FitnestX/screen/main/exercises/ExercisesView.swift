@@ -68,7 +68,7 @@ class ExercisesView : UIView {
         
         let whiteLineView = UIView()
         self.addSubview(whiteLineView)
-//        whiteLineView.frame = CGRect(x: 0, y: 0, width: 50, height: 5)
+        //        whiteLineView.frame = CGRect(x: 0, y: 0, width: 50, height: 5)
         whiteLineView.translatesAutoresizingMaskIntoConstraints = false
         whiteLineView.backgroundColor = .white
         whiteLineView.layer.cornerRadius = 2
@@ -106,6 +106,7 @@ class ExercisesView : UIView {
 }
 
 extension ExercisesView : UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width , height: 70)
     }

@@ -39,7 +39,6 @@ class ExerciseCell : UICollectionViewCell {
         return view
     }()
     
-    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
