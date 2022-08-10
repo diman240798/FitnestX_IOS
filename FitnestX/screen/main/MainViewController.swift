@@ -8,7 +8,31 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    lazy var viewPager: PagedView = {
+        let viewPager = PagedView()
+        
+        let view1 = ExercisesView()
+        let view2 = ProgramView(
+            "ic_men_program_slice",
+            "Программы тренировок для мужчин"
+        )
+        
+        let view3 = ProgramView(
+            "ic_women_program_slice",
+            "Программы тренировок для женщин"
+        )
+        
+        viewPager.pages = [
+            view1,
+            view2,
+            view3
+        ]
+        
+        viewPager.translatesAutoresizingMaskIntoConstraints = false
+        return viewPager
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,32 +54,10 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance.backgroundColor = .systemBlue
         self.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
-    
-    lazy var viewPager: ViewPager = {
-        let viewPager = ViewPager()
-        
-        let view1 = ExercisesView()
-
-        
-        
-        let view2 = ProgramView()
-        
-        let view3 = UIView()
-        view3.backgroundColor = .orange
-        
-        let newImageView3 = UIImageView()
-        newImageView3.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 375)
-        view3.addSubview(newImageView3)
-        newImageView3.contentMode = .scaleToFill
-        newImageView3.image = UIImage(named: "ic_women_program_slice")
-        
-        viewPager.pagedView.pages = [
-            view1,
-            view2,
-            view3
-        ]
-        viewPager.translatesAutoresizingMaskIntoConstraints = false
-        return viewPager
-    }()
 }
 
+//        let newImageView3 = UIImageView()
+//        newImageView3.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 375)
+//        view3.addSubview(newImageView3)
+//        newImageView3.contentMode = .scaleToFill
+//        newImageView3.image = UIImage(named: "ic_women_program_slice")

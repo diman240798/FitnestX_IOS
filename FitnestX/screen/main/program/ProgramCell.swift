@@ -25,7 +25,6 @@ class ProgramCell : UICollectionViewCell {
         return view
     }()
     
-    
     lazy var subtitle: UILabel = {
         let view = UILabel()
         view.textColor = Colors.blackLight
@@ -36,6 +35,7 @@ class ProgramCell : UICollectionViewCell {
     lazy var whiteBackground: UIView = {
         let view = UIView()
         view.backgroundColor = .white
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -60,7 +60,13 @@ class ProgramCell : UICollectionViewCell {
     }
     
     func setupUI() {
-        self.contentView.backgroundColor = .red
+        let gr = CAGradientLayer()
+        gr.cornerRadius = 20
+        gr.frame = self.contentView.bounds
+        gr.colors = [Colors.blueLight20.cgColor, Colors.blueDark20.cgColor]
+        gr.locations = [0.0, 1.0]
+        self.contentView.layer.insertSublayer(gr, at: 0)
+        
         self.contentView.addSubview(title)
         self.contentView.addSubview(subtitle)
         self.contentView.addSubview(whiteBackground)
@@ -72,7 +78,7 @@ class ProgramCell : UICollectionViewCell {
     func setConstraints() {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8)
+            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12)
         ])
         
         NSLayoutConstraint.activate([
@@ -84,7 +90,7 @@ class ProgramCell : UICollectionViewCell {
         NSLayoutConstraint.activate([
             whiteBackground.topAnchor.constraint(equalTo: subtitle.bottomAnchor, constant: 12),
             whiteBackground.leadingAnchor.constraint(equalTo: title.leadingAnchor),
-            whiteBackground.widthAnchor.constraint(equalToConstant: 195),
+            whiteBackground.widthAnchor.constraint(equalToConstant: 90),
             whiteBackground.heightAnchor.constraint(equalToConstant: 35)
         ])
         

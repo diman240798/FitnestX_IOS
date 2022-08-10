@@ -13,7 +13,12 @@ class ProgramView : UIView {
         ProgramItem("1. Программа на плечи", 15, 32)
     ]
     
-    init() {
+    let imageRes: String
+    let title: String
+    
+    init(_ imageRes: String, _ title: String) {
+        self.imageRes = imageRes
+        self.title = title
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         setupUi()
@@ -28,13 +33,14 @@ class ProgramView : UIView {
         imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 375)
         self.addSubview(imageView)
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "ic_men_program_slice")
+        imageView.image = UIImage(named: imageRes)
         
         let title = UILabel()
         self.addSubview(title)
         title.frame = .zero
+        title.font = .systemFont(ofSize: 24, weight: .medium)
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
-        let boldString = NSMutableAttributedString(string: "Программы тренировок для мужчин", attributes:attrs)
+        let boldString = NSMutableAttributedString(string: self.title, attributes:attrs)
         title.attributedText = boldString
         
         title.textColor = Colors.blackPrimary

@@ -7,11 +7,15 @@
 
 import UIKit
 
-struct Colors {
+enum Colors {
     
     static let blueLight = UIColor(named: "blueLight")!
     
     static let blueDark = UIColor(named: "blueDark")!
+    
+    static let blueLight20 = UIColor(named: "blueLight20")!
+    
+    static let blueDark20 = UIColor(named: "blueDark20")!
     
     static let blackPrimary = UIColor(named: "blackDark")!
     

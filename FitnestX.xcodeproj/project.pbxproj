@@ -23,7 +23,6 @@
 		82CBB85528991F4400DA44D8 /* FitnestXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB85428991F4400DA44D8 /* FitnestXUITestsLaunchTests.swift */; };
 		82CBB867289920F800DA44D8 /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB866289920F800DA44D8 /* ExerciseListViewController.swift */; };
 		82CBB8692899213400DA44D8 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB8682899213400DA44D8 /* WebViewViewController.swift */; };
-		82CBB86C2899232400DA44D8 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB86B2899232400DA44D8 /* ViewPager.swift */; };
 		82CBB86E2899233F00DA44D8 /* PagedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB86D2899233F00DA44D8 /* PagedView.swift */; };
 		82CBB8702899235900DA44D8 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB86F2899235900DA44D8 /* PageCollectionViewCell.swift */; };
 		82CBB87228992C8D00DA44D8 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 82CBB87128992C8D00DA44D8 /* index.html */; };
@@ -69,7 +68,6 @@
 		82CBB85428991F4400DA44D8 /* FitnestXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnestXUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82CBB866289920F800DA44D8 /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		82CBB8682899213400DA44D8 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
-		82CBB86B2899232400DA44D8 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		82CBB86D2899233F00DA44D8 /* PagedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedView.swift; sourceTree = "<group>"; };
 		82CBB86F2899235900DA44D8 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		82CBB87128992C8D00DA44D8 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 		82CBB86A289922DF00DA44D8 /* viewpager */ = {
 			isa = PBXGroup;
 			children = (
-				82CBB86B2899232400DA44D8 /* ViewPager.swift */,
 				82CBB86D2899233F00DA44D8 /* PagedView.swift */,
 				82CBB86F2899235900DA44D8 /* PageCollectionViewCell.swift */,
 			);
@@ -379,7 +376,6 @@
 				82B8859B289BFE5C003F7AA5 /* ProgramItem.swift in Sources */,
 				82B3BA3E289BDA4E00CDB5E0 /* ProgramView.swift in Sources */,
 				82FED061289A668D00242B9F /* ExerciseCell.swift in Sources */,
-				82CBB86C2899232400DA44D8 /* ViewPager.swift in Sources */,
 				82CBB8702899235900DA44D8 /* PageCollectionViewCell.swift in Sources */,
 				82CBB86E2899233F00DA44D8 /* PagedView.swift in Sources */,
 				82CBB83628991F4200DA44D8 /* MainViewController.swift in Sources */,
